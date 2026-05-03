@@ -1,0 +1,123 @@
+baseURL: "https://Tony00Back.github.io/"
+title: "Tony Gouveia"
+pagination:
+  pagerSize: 10
+theme: PaperMod
+
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+
+defaultContentLanguage: en
+defaultContentLanguageInSubdir: false
+
+languages:
+  en:
+    languageName: "English"
+    weight: 1
+    title: "Tony Gouveia"
+    params:
+      description: "Offensive Security | CPTS | HTB Writeups"
+  pt:
+    languageName: "Português"
+    weight: 2
+    title: "Tony Gouveia"
+    params:
+      description: "Segurança Ofensiva | CPTS | HTB Writeups"
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
+params:
+  env: production
+  author: "Tony Gouveia"
+  defaultTheme: dark
+  disableThemeToggle: false
+  ShowReadingTime: true
+  ShowShareButtons: false
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowWordCount: false
+  ShowRssButtonInSectionTermList: true
+  UseHugoToc: true
+  disableSpecial1stPost: false
+  disableScrollToTop: false
+  comments: false
+  hidemeta: false
+  hideSummary: false
+  showtoc: true
+  tocopen: false
+
+  label:
+    text: "Tony Gouveia"
+
+  profileMode:
+    enabled: true
+    title: "Tony Gouveia"
+    subtitle: |
+      Security Engineer → Offensive Security
+      CCNA · eJPT · CPTS (in progress) · OSCP (target)
+      HTB writeups, security research & notes
+    buttons:
+      - name: Writeups
+        url: posts
+      - name: Tags
+        url: tags
+
+  socialIcons:
+    - name: github
+      url: "https://github.com/Tony00Back"
+    - name: htb
+      url: "https://app.hackthebox.com"
+
+  cover:
+    hidden: false
+    hiddenInList: false
+    hiddenInSingle: false
+
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    keys: ["title", "permalink", "summary", "content"]
+
+menu:
+  main:
+    - identifier: posts
+      name: Posts
+      url: /posts/
+      weight: 10
+    - identifier: tags
+      name: Tags
+      url: /tags/
+      weight: 20
+    - identifier: about
+      name: About
+      url: /about/
+      weight: 30
+    - identifier: search
+      name: Search
+      url: /search/
+      weight: 40
+
+taxonomies:
+  category: categories
+  tag: tags
+  series: series
+
+markup:
+  highlight:
+    noClasses: false
+    anchorLineNos: true
+    codeFences: true
+    guessSyntax: true
+    lineNos: true
+    style: monokai
